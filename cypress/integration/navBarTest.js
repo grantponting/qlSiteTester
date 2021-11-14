@@ -126,92 +126,195 @@ describe ('Verify the Nav Bar is functioning', () =>{
 		const navBar = new navBarSelectors();
 		navBar.getTestServices().click();
 		navBar.getTestSolutions().trigger('mouseover');
-		navBar.getTestSolutionsFunctionalTesting().click(); 
-		cy.url().should('eq', '');
+		navBar.getTestSolutionsTestAutomation().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/test-automation/');
 	});
 
 	it('Test Services > Test Solutions > Usability Testing', () => {
 		const navBar = new navBarSelectors();
 		navBar.getTestServices().click();
 		navBar.getTestSolutions().trigger('mouseover');
-		navBar.getTestSolutionsFunctionalTesting().click(); 
-		cy.url().should('eq', '');
+		navBar.getTestSolutionsUsabilityTesting().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/usability-testing/');
 	});
 
 	it('Test Services > Test Solutions > Accessibility Testing', () => {
 		const navBar = new navBarSelectors();
 		navBar.getTestServices().click();
 		navBar.getTestSolutions().trigger('mouseover');
-		navBar.getTestSolutionsFunctionalTesting().click(); 
-		cy.url().should('eq', '');
+		navBar.getTestSolutionsAccessibilityTesting().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/accessibility-testing/');
 	});
 
 	it('Test Services > Test Solutions > WCAG Compliance Testing', () => {
 		const navBar = new navBarSelectors();
 		navBar.getTestServices().click();
 		navBar.getTestSolutions().trigger('mouseover');
-		navBar.getTestSolutionsFunctionalTesting().click(); 
-		cy.url().should('eq', '');
+		navBar.getTestSolutionsWCAG().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/wcag-compliance-testing-certification/');
 	});
 
 	it('Test Services > Test Solutions > Load & Performance Testing', () => {
 		const navBar = new navBarSelectors();
 		navBar.getTestServices().click();
 		navBar.getTestSolutions().trigger('mouseover');
-		navBar.getTestSolutionsFunctionalTesting().click(); 
-		cy.url().should('eq', '');
+		navBar.getTestSolutionsLoadAndPerformance().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/load-performance-testing/');
 	});
 
 	it('Test Services > Test Solutions > Regression Testing', () => {
 		const navBar = new navBarSelectors();
 		navBar.getTestServices().click();
 		navBar.getTestSolutions().trigger('mouseover');
-		navBar.getTestSolutionsFunctionalTesting().click(); 
-		cy.url().should('eq', '');
+		navBar.getTestSolutionsRegressionTesting().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/regression-testing/');
 	});
 
 	it('Test Services > Test Solutions > Exploratory Testing', () => {
 		const navBar = new navBarSelectors();
 		navBar.getTestServices().click();
 		navBar.getTestSolutions().trigger('mouseover');
-		navBar.getTestSolutionsFunctionalTesting().click(); 
-		cy.url().should('eq', '');
+		navBar.getTestSolutionsExploratoryTesting().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/exploratory-testing/');
 	});
 
 	it('Test Services > Test Solutions > Interoperability Testing', () => {
 		const navBar = new navBarSelectors();
 		navBar.getTestServices().click();
 		navBar.getTestSolutions().trigger('mouseover');
-		navBar.getTestSolutionsFunctionalTesting().click(); 
-		cy.url().should('eq', '');
+		navBar.getTestSolutionsInteroperabilityTesting().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/interoperability-testing/');
 	});
 
 	it('Test Services > Test Solutions > QA Test Tools', () => {
 		const navBar = new navBarSelectors();
 		navBar.getTestServices().click();
 		navBar.getTestSolutions().trigger('mouseover');
-		navBar.getTestSolutionsFunctionalTesting().click(); 
-		cy.url().should('eq', '');
+		navBar.getTestSolutionsQAtestTools().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/qa-test-tools/');
 	});
 
 	it('Test Services > Test Solutions > Agile QA', () => {
 		const navBar = new navBarSelectors();
 		navBar.getTestServices().click();
 		navBar.getTestSolutions().trigger('mouseover');
-		navBar.getTestSolutionsFunctionalTesting().click(); 
-		cy.url().should('eq', '');
+		navBar.getTestSolutionsAgileQA().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/agile-qa/');
 	});
 
 	it('Test Services > Test Solutions > Test & Technology Training', () => {
 		const navBar = new navBarSelectors();
 		navBar.getTestServices().click();
 		navBar.getTestSolutions().trigger('mouseover');
-		navBar.getTestSolutionsFunctionalTesting().click(); 
-		cy.url().should('eq', '');
+		navBar.getTestSolutionsTestAndTechTraining().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/test-technology-training/');
 	});
 
-//	it('Test Tools', () =>{
-//		const navBar = new navBarSelectors();
-//		navBar.getTestTools().click(); 
-//	});
+	it('Test Services > Industries > Retail & eCommerce', () => {
+		const navBar = new navBarSelectors();
+		navBar.getTestServices().click();
+		navBar.getIndustries().trigger('mouseover');
+		navBar.getIndustriesRetail().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/retail-ecommerce/');
+	});
+
+	it('Test Services > Industries > Media & Entertainment', () => {
+		const navBar = new navBarSelectors();
+		navBar.getTestServices().click();
+		navBar.getIndustries().trigger('mouseover');
+		navBar.getIndustriesMedia().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/media-entertainment/');
+	});
+
+	it('Test Services > Industries > Smart Energy', () => {
+		const navBar = new navBarSelectors();
+		navBar.getTestServices().click();
+	    navBar.getIndustries().trigger('mouseover');
+		navBar.getIndustriesSmartEnergy().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/smart-energy/');
+	});
+
+	it('Test Services > Industries > Social & Dating', () => {
+		const navBar = new navBarSelectors();
+		navBar.getTestServices().click();
+		navBar.getIndustries().trigger('mouseover');
+		navBar.getIndustriesSocial().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/social-dating/');
+	});
+
+	it('Test Services > Industries > Marketing & Design', () => {
+		const navBar = new navBarSelectors();
+		navBar.getTestServices().click();
+		navBar.getIndustries().trigger('mouseover');
+		navBar.getIndustriesMarketing().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/marketing-design/');
+	});
+
+	it('Test Services > Industries > Utilities', () => {
+		const navBar = new navBarSelectors();
+		navBar.getTestServices().click();
+		navBar.getIndustries().trigger('mouseover');
+		navBar.getIndustriesUtilities().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/utilities/');
+	});
+
+	it('Test Services > Industries > Imaging & 3D Printing', () => {
+		const navBar = new navBarSelectors();
+		navBar.getTestServices().click();
+		navBar.getIndustries().trigger('mouseover');
+		navBar.getIndustriesImaging().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/imaging-3d-printing/');
+	});
+
+	it('Test Services > Industries > Telecommunications', () => {
+		const navBar = new navBarSelectors();
+		navBar.getTestServices().click();
+		navBar.getIndustries().trigger('mouseover');
+		navBar.getIndustriesTelecommunications().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/telecom/');
+	});
+
+	it('Test Services > Industries > Education & Nonprofits', () => {
+		const navBar = new navBarSelectors();
+		navBar.getTestServices().click();
+		navBar.getIndustries().trigger('mouseover');
+		navBar.getIndustriesEducation().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/education-nonprofits/');
+	});
+
+	it('Test Tools > Smart Energy Test Tools', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getTestTools().click();
+		navBar.getTestToolsSmartEnergyTestTools().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/test-tools/smart-grid-test-tools/');
+	});
+
+	it('Test Tools > Printer and PDL', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getTestTools().click();
+		navBar.getTestToolsPrinterAndPDL().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/test-tools/printer-test-tools/');
+	});
+
+	it('Test Tools > Fax Test Tools', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getTestTools().click();
+		navBar.getTestToolsFaxTestTools().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/test-tools/fax-test-tools/');
+	});
+
+	it('Test Tools > Cost Effective Fax', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getTestTools().click();
+		navBar.getTestToolsCostEffectiveFax().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/cost-effective-fax-testing/');
+	});
+
+	it('Test Tools > Quality Logic Store', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getTestTools().click();
+		navBar.getTestToolsQualityLogicStore().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/store/');
+	});
+
 });
