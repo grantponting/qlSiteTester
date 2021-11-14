@@ -317,4 +317,187 @@ describe ('Verify the Nav Bar is functioning', () =>{
 		cy.url().should('eq', 'https://www.qualitylogic.com/store/');
 	});
 
+	it('Smart Energy > Tools > IEEE 2030.5 Test Tools', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getSmartEnergy().click();
+		navBar.getSmartEnergyTools().trigger('mouseover');
+		navBar.getSmartEnergyToolsIEEE2030().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/smart-energy-standards/ieee-2030-5-test-tools-qa-services/'); 
+	});
+
+	it('Smart Energy > Tools > IEEE 1547.1 Test Tools', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getSmartEnergy().click();
+		navBar.getSmartEnergyTools().trigger('mouseover');
+		navBar.getSmartEnergyToolsIEEE1547().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/smart-energy-standards/ieee-1547-1-test-tools/');
+	});
+
+	it('Smart Energy > Tools > OpenADR Test Tools', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getSmartEnergy().click();
+		navBar.getSmartEnergyTools().trigger('mouseover');
+		navBar.getSmartEnergyToolsOpenADR().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/smart-energy-standards/openadr-2-test-tools-and-qa-services/'); 
+	});
+
+	it('Smart Energy > Tools > Certification Testing Labs', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getSmartEnergy().click();
+		navBar.getSmartEnergyTools().trigger('mouseover');
+		navBar.getSmartEnergyToolsCertificationTestingLabs().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/smart-energy/smart-energy-certification-testing/'); 
+	});
+
+	it('Smart Energy > Tools > Wi-SUN Test Tools', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getSmartEnergy().click();
+		navBar.getSmartEnergyTools().trigger('mouseover');
+		navBar.getSmartEnergyToolsWiSUNtestTools().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/smart-energy-standards/wi-sun-test-tools/'); 
+	});
+
+	it('Smart Energy > Training > Smart Energy Technology Training', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getSmartEnergy().click();
+		navBar.getSmartEnergyTraining().trigger('mouseover');
+		navBar.getSmartEnergyTrainingSmartEnergyTech().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/smart-energy-standards/smart-energy-technology-training/'); 
+	});
+
+	it('Smart Energy > Training > IEEE 2030.5 DER Workshop', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getSmartEnergy().click();
+		navBar.getSmartEnergyTraining().trigger('mouseover');
+		navBar.getSmartEnergyTrainingIEEE2030().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/training/ieee-2030-5-der-workshop/'); 
+	});
+
+	it('Smart Energy > Training > OpenADR Training', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getSmartEnergy().click();
+		navBar.getSmartEnergyTraining().trigger('mouseover');
+		navBar.getSmartEnergyTrainingOpenADR().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/training/openadr-training-workshop/'); 
+	});
+
+	it('Smart Energy > Training > Tools & Maintenance', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getSmartEnergy().click();
+		navBar.getSmartEnergyTraining().trigger('mouseover');
+		navBar.getSmartEnergyTrainingToolsAndMaintenance().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/shop/'); 
+	});
+	
+	it('Smart Energy > Services > Vendor Service Solutions', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getSmartEnergy().click();
+		navBar.getSmartEnergyServices().trigger('mouseover');
+		navBar.getSmartEnergyServicesVendor().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/smart-energy/guiding-vendors-through-der-chaos/'); 
+	});
+	
+	it('Smart Energy > Services > Utility Service Solutions', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getSmartEnergy().click();
+		navBar.getSmartEnergyServices().trigger('mouseover');
+		navBar.getSmartEnergyServicesUtility().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/smart-energy/guiding-utilities-through-der-chaos/'); 
+	});
+
+	it('Smart Energy > GridEdge Intelligence', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getSmartEnergy().click();
+		navBar.getSmartEnergyGridEdge().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/smart-energy/gridedge-intelligence-launch/'); 
+	});
+
+	it('Smart Energy > QualityLogic Store', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getSmartEnergy().click();
+		navBar.getSmartEnergyQualityLogicStore().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/store/'); 
+	});
+
+	it('Training > IEEE 2030.5 Training', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getTraining().click();
+		navBar.getTrainingIEEE2030().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/training/ieee-2030-5-der-workshop/'); 
+	});
+
+	it('Training > OpenADR Training', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getTraining().click();
+		navBar.getTrainingOpenADR().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/training/openadr-training-workshop/'); 
+	});
+
+	it('Training > Fax Technology Training', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getTraining().click();
+		navBar.getTrainingFaxTech().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/training/fax-technology-training/'); 
+	});
+
+	it('Training > Free Webinars', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getTraining().click();
+		navBar.getTrainingFreeWebinars().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/knowledge-center/free-webinars/'); 
+	});
+
+	it('Training > QualityLogic Store', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getTraining().click();
+		navBar.getTrainingQualityLogicStore().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/store/'); 
+	});
+
+	it('QA Resources > Blog', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getQAresources().click();
+		navBar.getQAresourcesBlog().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/knowledge-center/blog/'); 
+	});
+
+	it('QA Resources > Case Studies', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getQAresources().click();
+		navBar.getQAresourcesCaseStudies().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/knowledge-center/case-studies/'); 
+	});
+
+	it('QA Resources > News & Events', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getQAresources().click();
+		navBar.getQAresourcesNews().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/knowledge-center/news-events/'); 
+	});
+
+	it('QA Resources > Content Library', () =>{
+		const navBar = new navBarSelectors();
+		navBar.getQAresources().click();
+		navBar.getQAresourcesContentLibrary().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/knowledge-center/content-library/'); 
+	});
+
+	it("Contact Us", () => {
+		const navBar = new navBarSelectors();
+		navBar.getContactUs().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/contact/');
+	});
+
+	it("Search", () => {
+		const navBar = new navBarSelectors();
+		navBar.getSearch().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/search/');
+	});
+
+	it("Cart", () => {
+		const navBar = new navBarSelectors();
+		navBar.getCart().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/cart/');
+	});
+
 });
