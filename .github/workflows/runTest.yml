@@ -15,6 +15,12 @@ jobs:
         with:
           ignore_sha: true
           access_token: ${{ github.token }}
+      
+      - name: Download the build folders
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: build
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
