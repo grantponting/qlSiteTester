@@ -1,14 +1,13 @@
 name: linter
 
-# Controls when the workflow will run
 on: push
 
 jobs:
-  linter:
+  super-lint:
     name: lint code
     runs-on: ubuntu-latest
     steps:
-      - name: checkout code
+      - name: Checkout code
         uses: actions/checkout@v2
         
       - name: run linter
