@@ -1,13 +1,12 @@
-name: runTest
+name: Cypress Tests
 
-on: push
+on: [push]
 
 jobs:
-  RunTest:
-    name: Run Nav Bar Test
+  cypress-run:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v2
         
       - name: Cancel previous runs
@@ -16,12 +15,8 @@ jobs:
           ignore_sha: true
           access_token: ${{ github.token }}
 
-      - name: Install Cypress and Verify
-        run: 
-          npm ci
-          $(npm bin)/cypress verify
-          
       - name: Cypress run
-        run: |   
-          npx cypress run --spec cypress/integration/navBarTest.js --browser chrome --headless
-        
+        uses: cypress-io/github-action@v2
+        with:
+          build: npm run build
+          start: npm start
