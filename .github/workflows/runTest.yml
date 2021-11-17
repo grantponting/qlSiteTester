@@ -11,9 +11,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install Cypress
-              run: npm install
+        run: npm install
 
-            - name: Run tests in QA
-              run: |   
-                  npx cypress run --spec cypress/integration/navBarTest.js --browser chrome --headless --env allure=true,configFile=qa
-              continue-on-error: true
+      - name: Run tests in QA
+        run: |   
+          npx cypress run --spec cypress/integration/navBarTest.js --browser chrome --headless --env allure=true,configFile=qa
+        continue-on-error: true
