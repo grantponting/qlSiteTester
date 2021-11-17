@@ -22,5 +22,6 @@ jobs:
           $(npm bin)/cypress verify
           
       - name: Cypress run
-        run: --spec cypress/integration/navBarTest.js --browser chrome --headless
+        run: |   
+          --spec cypress/integration/navBarTest.js --browser chrome --headless
         
