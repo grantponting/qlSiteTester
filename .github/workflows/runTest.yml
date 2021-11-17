@@ -23,5 +23,5 @@ jobs:
           
       - name: Cypress run
         run: |   
-          --spec cypress/integration/navBarTest.js --browser chrome --headless
+          npx cypress run --spec cypress/integration/navBarTest.js --browser chrome --headless
         
