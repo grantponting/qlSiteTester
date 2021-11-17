@@ -16,9 +16,8 @@ jobs:
           ignore_sha: true
           access_token: ${{ github.token }}
 
-      - name: Install Cypress
-        run: npm install
-
-      - name: Run tests
-        run: |   
-          npx cypress run --spec cypress/integration/navBarTest.js --browser chrome --headless
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          build: npm run build
+          start: npm start
