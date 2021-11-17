@@ -8,10 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2/cypress
+        uses: actions/checkout@v2
         
       - name: run linter
         uses: github/super-linter@v3
         env: 
+          FILTER_REGEX_EXCLUDE: node_modules/*
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}} 
