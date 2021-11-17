@@ -7,7 +7,7 @@ describe ('Verify the Nav Bar is functioning', () =>{
 		cy.viewport(1440, 850); 
 		cy.navigateToSite(); 
 	
-		cy.on('uncaught:exception', (err, runnable) => {	//this error is seen on several pages, ignoring so that tests do not fail due to this error
+		cy.on('uncaught:exception', (err, runnable) => {		//this error is seen on several pages, ignoring so that tests do not fail due to this error
 			expect(err.message, { log: false }).to.include('wp is not defined');
 			return false;
 		}); 

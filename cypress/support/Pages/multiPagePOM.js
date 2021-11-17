@@ -159,25 +159,25 @@ getSmartEnergyTraining(){
 	return cy.get('ul#menu-new-primary-navigation').children().eq(2).find('ul.sub-menu').children().eq(1); 
 }
 getSmartEnergyTrainingSmartEnergyTech(){
-	return cy.get('ul#menu-new-primary-navigation').children().eq(2).find('ul.sub-menu').children().eq(1).find('ul.sub-menu').children().eq(0); ; 
+	return cy.get('ul#menu-new-primary-navigation').children().eq(2).find('ul.sub-menu').children().eq(1).find('ul.sub-menu').children().eq(0);
 }
 getSmartEnergyTrainingIEEE2030(){
-	return cy.get('ul#menu-new-primary-navigation').children().eq(2).find('ul.sub-menu').children().eq(1).find('ul.sub-menu').children().eq(1); ; 
+	return cy.get('ul#menu-new-primary-navigation').children().eq(2).find('ul.sub-menu').children().eq(1).find('ul.sub-menu').children().eq(1);
 }
 getSmartEnergyTrainingOpenADR(){
-	return cy.get('ul#menu-new-primary-navigation').children().eq(2).find('ul.sub-menu').children().eq(1).find('ul.sub-menu').children().eq(2); ; 
+	return cy.get('ul#menu-new-primary-navigation').children().eq(2).find('ul.sub-menu').children().eq(1).find('ul.sub-menu').children().eq(2);
 }
 getSmartEnergyTrainingToolsAndMaintenance(){
-	return cy.get('ul#menu-new-primary-navigation').children().eq(2).find('ul.sub-menu').children().eq(1).find('ul.sub-menu').children().eq(3); ; 
+	return cy.get('ul#menu-new-primary-navigation').children().eq(2).find('ul.sub-menu').children().eq(1).find('ul.sub-menu').children().eq(3);
 }
 getSmartEnergyServices(){
 	return cy.get('ul#menu-new-primary-navigation').children().eq(2).find('ul.sub-menu').children().eq(2); 
 }
 getSmartEnergyServicesVendor(){
-	return cy.get('ul#menu-new-primary-navigation').children().eq(2).find('ul.sub-menu').children().eq(2).find('ul.sub-menu').children().eq(0); ; 
+	return cy.get('ul#menu-new-primary-navigation').children().eq(2).find('ul.sub-menu').children().eq(2).find('ul.sub-menu').children().eq(0);
 }
 getSmartEnergyServicesUtility(){
-	return cy.get('ul#menu-new-primary-navigation').children().eq(2).find('ul.sub-menu').children().eq(2).find('ul.sub-menu').children().eq(1); ; 
+	return cy.get('ul#menu-new-primary-navigation').children().eq(2).find('ul.sub-menu').children().eq(2).find('ul.sub-menu').children().eq(1);
 }
 getSmartEnergyGridEdge(){
 	return cy.get('ul#menu-new-primary-navigation').children().eq(2).find('ul.sub-menu').children().eq(3); 

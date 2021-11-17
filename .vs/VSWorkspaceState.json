@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\cypress",
+    "\\cypress\\integration",
+    "\\cypress\\support",
+    "\\cypress\\support\\Pages"
+  ],
+  "SelectedNode": "\\cypress\\support\\Pages\\multiPagePOM.js",
+  "PreviewInSolutionExplorer": false
+}
