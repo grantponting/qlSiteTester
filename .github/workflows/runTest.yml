@@ -19,7 +19,6 @@ jobs:
       - name: Install Cypress
         run: npm install
 
-      - name: Run tests in QA
+      - name: Run tests
         run: |   
-          npx cypress run --spec cypress/integration/navBarTest.js --browser chrome --headless --env allure=true,configFile=qa
-        continue-on-error: true
+          npx cypress run --spec cypress/integration/navBarTest.js --browser chrome --headless
