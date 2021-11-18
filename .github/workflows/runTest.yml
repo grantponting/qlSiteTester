@@ -18,12 +18,9 @@ jobs:
       - name: Install Cypress
         run: |
           pwd
-          cd ..
-          pwd
           npm install
+          pwd
 
       - name: run tests
         run: |
-          cd ..
-          pwd
           npx Cypress run --spec cypress/integration/navBarTest.js --browser chrome --headless
