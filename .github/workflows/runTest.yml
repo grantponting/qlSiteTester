@@ -15,12 +15,15 @@ jobs:
           ignore_sha: true
           access_token: ${{ github.token }}
       
-      - name: where am I
+      - name: Install Cypress
         run: |
           pwd
+          cd ..
+          pwd
+          npm install
 
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          build: npm run build
-          start: npm start
+      - name: run tests
+        run: |
+          cd ..
+          pwd
+          npx Cypress run --spec cypress/integration/navBarTest.js --browser chrome --headless
