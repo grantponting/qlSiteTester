@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import navBarSelectors from '../support/pages/multiPagePOM.js';
+import navBarSelectors from '../support/Pages/multiPagePOM.js';
 
 describe ('Verify the Nav Bar is functioning', () =>{
 	beforeEach(() => {
