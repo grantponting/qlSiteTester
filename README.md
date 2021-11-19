@@ -1,1 +1,1 @@
-# qlSiteTester
+# Automation testing for the QualityLogic Site. 
