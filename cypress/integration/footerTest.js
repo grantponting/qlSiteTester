@@ -4,9 +4,7 @@ import navBarSelectors from '../support/Pages/multiPagePOM.js';
 
 describe ('Verify the Footer is functioning', () =>{
 	beforeEach(() => {
-		cy.viewport(1440, 850);
-		cy.navigateToSite(); 
-	
+        cy.viewport(1440, 850);
 		cy.on('uncaught:exception', (err, runnable) => {		//this error is seen on several pages, ignoring so that tests do not fail due to this error
 			expect(err.message, { log: false }).to.include('wp is not defined');
 			return false;
@@ -14,6 +12,7 @@ describe ('Verify the Footer is functioning', () =>{
 	}); 
 	
 	it('What we Test', () => {
+        cy.navigateToSite(); 
         const navBar = new navBarSelectors();
 		navBar.getFooterWhatWeTest().click();
 		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/');

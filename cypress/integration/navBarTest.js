@@ -5,8 +5,6 @@ import navBarSelectors from '../support/Pages/multiPagePOM.js';
 describe ('Verify the Nav Bar is functioning', () =>{
 	beforeEach(() => {
 		cy.viewport(1440, 850);
-		cy.navigateToSite(); 
-	
 		cy.on('uncaught:exception', (err, runnable) => {		//this error is seen on several pages, ignoring so that tests do not fail due to this error
 			expect(err.message, { log: false }).to.include('wp is not defined');
 			return false;
@@ -14,6 +12,7 @@ describe ('Verify the Nav Bar is functioning', () =>{
 	}); 
 	
 	it('Home Page Button', () => {
+		cy.navigateToSite(); 
 		const navBar = new navBarSelectors();
 		navBar.getHomePageButton().click();
 		cy.url().should('eq', 'https://www.qualitylogic.com/');
