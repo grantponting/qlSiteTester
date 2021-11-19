@@ -4,7 +4,7 @@ import navBarSelectors from '../support/Pages/multiPagePOM.js';
 
 describe ('Verify the Nav Bar is functioning', () =>{
 	beforeEach(() => {
-		cy.viewport(1440, 850); 
+		cy.viewport(1440, 850);
 		cy.navigateToSite(); 
 	
 		cy.on('uncaught:exception', (err, runnable) => {		//this error is seen on several pages, ignoring so that tests do not fail due to this error
@@ -21,7 +21,7 @@ describe ('Verify the Nav Bar is functioning', () =>{
 
 	it('Test Services > Software Test Services', () => {   
 		const navBar = new navBarSelectors();
-		navBar.getTestServices().click(); 
+		navBar.getTestServices().click();
 		navBar.getSoftwareTestServices().click(); 
 		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/');
 	});

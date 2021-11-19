@@ -227,5 +227,41 @@ getSearch(){
 getCart(){
 	return cy.get('ul#menu-new-primary-navigation').children().eq(7); 
 }
+getFooterWhatWeTest(){
+	return cy.get('ul#menu-footer').children().eq(0);
+}
+getFooterTestSolutions(){
+	return cy.get('ul#menu-footer').children().eq(1);
+}
+getFooterKnowledgeCenter(){
+	return cy.get('ul#menu-footer').children().eq(2);
+}
+getFooterWhyUs(){
+	return cy.get('ul#menu-footer').children().eq(3);
+}
+getFooterWhoWeAre(){
+	return cy.get('ul#menu-footer').children().eq(4);
+}
+getFooterCareers(){
+	return cy.get('ul#menu-footer').children().eq(5);
+}
+getFooterContactUs(){
+	return cy.get('ul#menu-footer').children().eq(6);
+}
+getFacebook(){
+	return cy.get('ul#menu-social-media').children().eq(0).find('a.social-link');
+}
+getTwitter(){
+	return cy.get('ul#menu-social-media').children().eq(1).find('a.social-link');
+}
+getLinkedIn(){
+	return cy.get('ul#menu-social-media').children().eq(2).find('a.social-link');
+}
+getYouTube(){
+	return cy.get('ul#menu-social-media').children().eq(3).find('a.social-link');
+}
+getAddress(){
+	return cy.get('div.row.column.text-center.footer-address');
+}
 }
 export default navBarSelectors;
