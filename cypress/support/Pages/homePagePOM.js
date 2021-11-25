@@ -40,5 +40,47 @@ getVideoEndScreen(){
 	const homePage = new homePagePOM();
 	return homePage.getVideoPlayerIframeBody().find('div._9YMRg', {timeout:120000});
 }
+getVideoSkipButton(){
+	const homePage = new homePagePOM();
+	return homePage.getVideoEndScreen().find('button._9zHax');
+}
+getVideoScheduleMeetingButton(){
+	const homePage = new homePagePOM();
+	return homePage.getVideoEndScreen().find('a.PMdp8'); 
+}
+getContactUsTodayAndReadMore(){
+	return cy.get('a.button.purple.large');
+}
+getClutchIframe(){
+	return cy.get('div.clutch-widget').find('iframe').its('0.contentDocument').should('exist');
+}
+getClutchIframeBody(){
+	const homePage = new homePagePOM(); 
+	return homePage.getClutchIframe().its('body').should('not.be.undefined').then(cy.wrap);
+}
+getClutchLogo(){
+	const homePage = new homePagePOM();
+	return homePage.getClutchIframeBody().find('div.middle_widget_top').find('a.logotype'); 
+}
+getClutchTitle(){
+	const homePage = new homePagePOM();
+	return homePage.getClutchIframeBody().find('div.middle_widget_title').find('a');
+}
+getClutchReviewsStars(){
+	const homePage = new homePagePOM();
+	return homePage.getClutchIframeBody().find('div.middle_widget_stars').find('div.reviews-totals-stars').find('a');
+}
+getClutchReviewsCount(){
+	const homePage = new homePagePOM();
+	return homePage.getClutchIframeBody().find('div.middle_widget_stars').find('span.reviews-count').find('a');
+}
+getClutchNextButton(){
+	const homePage = new homePagePOM();
+	return homePage.getClutchIframeBody().find('div.middle_widget_slider.clearfix').find('div.tns-controls').find('[data-controls=next]'); 
+}
+getClutchPrevButton(){
+	const homePage = new homePagePOM();
+	return homePage.getClutchIframeBody().find('div.middle_widget_slider.clearfix').find('div.tns-controls').find('[data-controls=prev]'); 
+}
 }
 export default homePagePOM;
