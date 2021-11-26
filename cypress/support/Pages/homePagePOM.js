@@ -116,5 +116,136 @@ getLearnMoreCTA(){
 getSoftwareTestingSection(){
 	return cy.get('section.resources.module-pad').find('article.resources-item.column.column-block'); 
 }
+getViewAllResourcesCTA(){
+	return cy.get('section.resources.module-pad').find('div.column.row.text-center').find('a.button.blue');
+}
+getWhatWeTest(){
+	return cy.get('div.row').find('article.medium-4.featured-expertises-item.gray').find('ul');
+}
+getMobileApps(){
+	const homePage = new homePagePOM();
+	return homePage.getWhatWeTest().children().eq(0).find('a');
+}
+getWeb(){
+	const homePage = new homePagePOM();
+	return homePage.getWhatWeTest().children().eq(1).find('a');
+}
+getEcommerce(){
+	const homePage = new homePagePOM();
+	return homePage.getWhatWeTest().children().eq(2).find('a');
+}
+getOTTandStreaming(){
+	const homePage = new homePagePOM();
+	return homePage.getWhatWeTest().children().eq(3).find('a');
+}
+getAnalyticsAndTelemetry(){
+	const homePage = new homePagePOM();
+	return homePage.getWhatWeTest().children().eq(4).find('a');
+}
+getAPI(){
+	const homePage = new homePagePOM();
+	return homePage.getWhatWeTest().children().eq(5).find('a');
+}
+getIoT(){
+	const homePage = new homePagePOM();
+	return homePage.getWhatWeTest().children().eq(6).find('a');
+}
+getSmartEnergyStandards(){
+	const homePage = new homePagePOM();
+	return homePage.getWhatWeTest().children().eq(7).find('a');
+}
+getPrintSystems(){
+	const homePage = new homePagePOM();
+	return homePage.getWhatWeTest().children().eq(8).find('a');
+}
+getFax(){
+	const homePage = new homePagePOM();
+	return homePage.getWhatWeTest().children().eq(9).find('a');
+}
+getSoftwareTestSolutions(){
+	return cy.get('div.row').find('article.medium-4.featured-expertises-item.blue').find('ul');
+}
+getFunctionality(){
+	const homePage = new homePagePOM();
+	return homePage.getSoftwareTestSolutions().children().eq(0).find('a');
+}
+getInteroperability(){
+	const homePage = new homePagePOM();
+	return homePage.getSoftwareTestSolutions().children().eq(1).find('a');
+}
+getUsability(){
+	const homePage = new homePagePOM();
+	return homePage.getSoftwareTestSolutions().children().eq(2).find('a');
+}
+getTestAutomation(){
+	const homePage = new homePagePOM();
+	return homePage.getSoftwareTestSolutions().children().eq(3).find('a');
+}
+getQAtestTools(){
+	const homePage = new homePagePOM();
+	return homePage.getSoftwareTestSolutions().children().eq(4).find('a');
+}
+getExploratoryTesting(){
+	const homePage = new homePagePOM();
+	return homePage.getSoftwareTestSolutions().children().eq(5).find('a');
+}
+getAgileQA(){
+	const homePage = new homePagePOM();
+	return homePage.getSoftwareTestSolutions().children().eq(6).find('a');
+}
+getLoadAndPerformance(){
+	const homePage = new homePagePOM();
+	return homePage.getSoftwareTestSolutions().children().eq(7).find('a');
+}
+getTestAndTechnology(){
+	const homePage = new homePagePOM();
+	return homePage.getSoftwareTestSolutions().children().eq(8).find('a');
+}
+getAccessibility(){
+	const homePage = new homePagePOM();
+	return homePage.getSoftwareTestSolutions().children().eq(9).find('a');
+}
+getIndustries(){
+	return cy.get('div.row').find('article.medium-4.featured-expertises-item.teal').find('ul');
+}
+getRetailAndEcommerce(){
+	const homePage = new homePagePOM();
+	return homePage.getIndustries().children().eq(0).find('a');
+}
+getMediaAndEntertainment(){
+	const homePage = new homePagePOM();
+	return homePage.getIndustries().children().eq(1).find('a');
+}
+getSocialAndDating(){
+	const homePage = new homePagePOM();
+	return homePage.getIndustries().children().eq(2).find('a');
+}
+getMarketingAndDesign(){
+	const homePage = new homePagePOM();
+	return homePage.getIndustries().children().eq(3).find('a');
+}
+getSmartEnergy(){
+	const homePage = new homePagePOM();
+	return homePage.getIndustries().children().eq(4).find('a');
+}
+getUtilities(){
+	const homePage = new homePagePOM();
+	return homePage.getIndustries().children().eq(5).find('a');
+}
+getImaging(){
+	const homePage = new homePagePOM();
+	return homePage.getIndustries().children().eq(6).find('a');
+}
+getTelecom(){
+	const homePage = new homePagePOM();
+	return homePage.getIndustries().children().eq(7).find('a');
+}
+getEducation(){
+	const homePage = new homePagePOM();
+	return homePage.getIndustries().children().eq(8).find('a');
+}
+getLogoRows(){
+	return cy.get('section#clients-logos').find('div.row.column.text-center').find('div.su-row'); 
+}
 }
 export default homePagePOM;

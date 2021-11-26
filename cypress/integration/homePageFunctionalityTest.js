@@ -28,7 +28,7 @@ describe ('Verify the Homepage has the correct functionality', () =>{
 			method: 'GET',
 			url: 'https://cdn.vidyard.com/hls-videos/38ZdF4RoDoI-qNi017y91A/sd_segmented/sd_segmented_007.ts',
 		  }).as('sd_segmented_007.ts');
-		cy.wait('@sd_segmented_007.ts', {timeout: 10000}).its('response.statusCode').should('equal', 200);
+		cy.wait('@sd_segmented_007.ts', {timeout: 15000}).its('response.statusCode').should('equal', 200);
 
 		homePage.getVideoPlayerButton().click(); 
 		homePage.getVideoEndScreen().should('exist');
@@ -189,4 +189,194 @@ describe ('Verify the Homepage has the correct functionality', () =>{
 			}
 		});
 	});
+
+	it('View All Resources CTA', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getViewAllResourcesCTA().click(); 
+		cy.url().should('eq', 'https://www.qualitylogic.com/knowledge-center/');
+	});
+
+	it('Mobile App link', () => {
+		const homePage = new homePagePOM();
+		homePage.getMobileApps().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/mobile-apps/');
+	});
+
+	it('Web link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getWeb().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/web/'); 
+	});
+
+	it('eCommerce link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getEcommerce().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/ecommerce/'); 
+	});
+
+	it('OTT & Streaming Media link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getOTTandStreaming().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/ott-streaming-media/'); 
+	});
+
+	it('Analytics & Telemetry link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getAnalyticsAndTelemetry().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/analytics-telemetry/'); 
+	});
+
+	it('APIs link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getAPI().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/apis/'); 
+	});
+
+	it('IoT link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getIoT().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/internet-of-things-iot/'); 
+	});
+
+	it('Smart Energy Standards link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getSmartEnergyStandards().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/smart-energy-standards/'); 
+	});
+
+	it('Print Systems link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getPrintSystems().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/print-systems/'); 
+	});
+
+	it('Fax & Fax over IP link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getFax().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/fax-fax-over-ip/'); 
+	});
+
+	it('Functionality Testing link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getFunctionality().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/functionality-testing/'); 
+	});
+
+	it('Interoperability Testing link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getInteroperability().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/interoperability-testing/'); 
+	});
+
+	it('Usability Testing link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getUsability().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/usability-testing/'); 
+	});
+
+	it('Test Automation link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getTestAutomation().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/test-automation/'); 
+	});
+
+	it('QA Test Tools link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getQAtestTools().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/qa-test-tools/'); 
+	});
+
+	it('Exploratory Testing link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getExploratoryTesting().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/exploratory-testing/'); 
+	});
+
+	it('Agile QA link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getAgileQA().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/agile-qa/'); 
+	});
+
+	it('Load & Performance Testing link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getLoadAndPerformance().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/load-performance-testing/'); 
+	});
+
+	it('Test & Technology Training link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getTestAndTechnology().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/test-technology-training/'); 
+	});
+
+	it('Accessibility Testing link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getAccessibility().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/accessibility-testing/'); 
+	});
+
+	it('Retail & eCommerce link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getRetailAndEcommerce().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/retail-ecommerce/'); 
+	});
+
+	it('Media & Entertainment link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getMediaAndEntertainment().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/media-entertainment/'); 
+	});
+
+	it('Social & Dating link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getSocialAndDating().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/social-dating/'); 
+	});
+
+	it('Marketing & Design link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getMarketingAndDesign().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/marketing-design/'); 
+	});
+
+	it('Smart Energy link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getSmartEnergy().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/smart-energy/'); 
+	});
+
+	it('Utilities link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getUtilities().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/utilities/'); 
+	});
+
+	it('Imaging & 3D Printing link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getImaging().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/imaging-3d-printing/'); 
+	});
+
+	it('Telecom link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getTelecom().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/telecom/'); 
+	});
+
+	it('Education & Nonprofits link', () => {
+		const homePage = new homePagePOM(); 
+		homePage.getEducation().click();
+		cy.url().should('eq', 'https://www.qualitylogic.com/industries/education-nonprofits/'); 
+	});
+
+	it('Logos', () => { // checks that all logos are displaying an image (could add a test for the hyperlinks on certain logos)
+		const homePage = new homePagePOM();
+		homePage.getLogoRows().each(($el) => {
+			cy.wrap($el).find('div.su-column.su-column').each(($el) => {
+				cy.wrap($el).find('img');
+			});
+		});
+	});
+
 });
