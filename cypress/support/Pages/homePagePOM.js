@@ -82,5 +82,39 @@ getClutchPrevButton(){
 	const homePage = new homePagePOM();
 	return homePage.getClutchIframeBody().find('div.middle_widget_slider.clearfix').find('div.tns-controls').find('[data-controls=prev]'); 
 }
+getFirstNameField(){
+	return cy.get('fieldset.form-columns-2').find('div.hs_firstname').find('div.input').find('input#firstname-f6f94c28-b673-48f3-bd6a-01f932c48e03');
+}
+getLastNameField(){
+	return cy.get('fieldset.form-columns-2').find('div.hs_lastname').find('div.input').find('input#lastname-f6f94c28-b673-48f3-bd6a-01f932c48e03');
+}
+getEmailField(){
+	return cy.get('fieldset.form-columns-1').find('div.hs_email').find('div.input').find('input#email-f6f94c28-b673-48f3-bd6a-01f932c48e03');
+
+}
+getCompanyField(){
+	return cy.get('fieldset.form-columns-1').find('div.hs_company').find('div.input').find('input#company-f6f94c28-b673-48f3-bd6a-01f932c48e03');
+}
+getHelpField(){
+	return cy.get('fieldset.form-columns-1').find('div.hs_message').find('div.input').find('textarea#message-f6f94c28-b673-48f3-bd6a-01f932c48e03');
+}
+getBookDiscoveryCTA(){
+	return cy.get('div.medium-6.columns').find('a.su-button');
+}
+getOurGuaranteeCTA(){
+	return cy.get('div.text-center.module-pad.icon-panel-home.background-').find('article.medium-4.columns.icon-panel-home-item.blue').find('a.button.blue');
+}
+getHowWeWorkCTA(){
+	return cy.get('div.text-center.module-pad.icon-panel-home.background-').find('article.medium-4.columns.icon-panel-home-item.teal').find('a.button.teal');
+}
+getGetStartedNowCTA(){
+	return cy.get('div.text-center.module-pad.icon-panel-home.background-').find('article.medium-4.columns.icon-panel-home-item.purple').find('a.button.purple');
+}
+getLearnMoreCTA(){
+	return cy.get('section#features-benefits').find('div.row.column.text-center').find('a.button.primary');
+}
+getSoftwareTestingSection(){
+	return cy.get('section.resources.module-pad').find('article.resources-item.column.column-block'); 
+}
 }
 export default homePagePOM;
