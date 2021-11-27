@@ -39,4 +39,56 @@ describe ('Verify the Contact page has the correct functionality', () =>{
 		contactPage.getCareersCTA().click();
 		cy.url().should('eq', 'https://www.qualitylogic.com/contact/careers/'); 
 	});
+
+    it('First Name Field', () => {
+        const contactPage = new contactPOM(); 
+        contactPage.getFirstNameField().should('not.have.class', 'error');
+		contactPage.getLastNameField().should('not.have.class', 'error'); 
+        contactPage.getWorkEmailField().should('not.have.class', 'error'); 
+        contactPage.getCompanyField().should('not.have.class', 'error'); 
+        contactPage.getAreYouDropdown().find('select').should('not.have.class', 'error'); 
+        contactPage.getAreaOfInterestDropdown().find('select').should('not.have.class', 'error'); 
+        contactPage.getTellUsAboutProjectField().should('not.have.class', 'error'); 
+
+        contactPage.getFirstNameField().click(); 
+        contactPage.getLastNameField().click(); 
+        contactPage.getWorkEmailField().click();
+        contactPage.getCompanyField().click();
+        contactPage.getAreYouDropdown().click();
+        contactPage.getAreaOfInterestDropdown().click();
+        contactPage.getTellUsAboutProjectField().click(); 
+        contactPage.getFirstNameField().click(); // selects the first name field again so that the last error is displayed
+
+        contactPage.getFirstNameField().should('have.class', 'error');
+		contactPage.getLastNameField().should('have.class', 'error'); 
+        contactPage.getWorkEmailField().should('have.class', 'error'); 
+        contactPage.getCompanyField().should('have.class', 'error'); 
+        contactPage.getAreYouDropdown().find('select').should('have.class', 'error'); 
+        contactPage.getAreaOfInterestDropdown().find('select').should('have.class', 'error'); 
+        contactPage.getTellUsAboutProjectField().should('have.class', 'error');
+
+        contactPage.getFirstNameField().type('Test');
+		contactPage.getLastNameField().type('Tester');
+        contactPage.getWorkEmailField().type('test@tester.com');
+        contactPage.getCompanyField().type('QualityLogic');
+        contactPage.getAreYouDropdown().find('select').select('Researching for a Future Project');
+        contactPage.getAreaOfInterestDropdown().find('select').select('Web, Mobile, eCommerce');
+        contactPage.getTellUsAboutProjectField().type('Its related to your site');
+
+        contactPage.getFirstNameField().should('not.have.class', 'error');
+		contactPage.getLastNameField().should('not.have.class', 'error'); 
+        contactPage.getWorkEmailField().should('not.have.class', 'error'); 
+        contactPage.getCompanyField().should('not.have.class', 'error'); 
+        contactPage.getAreYouDropdown().should('not.have.class', 'error'); 
+        contactPage.getAreaOfInterestDropdown().should('not.have.class', 'error'); 
+        contactPage.getTellUsAboutProjectField().should('not.have.class', 'error'); 
+    });
+
+    it('Drags Carousel', () => {  // not convinced this is working how I want it to. I think this is a false positive
+		const contactPage = new contactPOM();
+        contactPage.getLogoCarousel()
+            .trigger('mousedown', { which:1}, {force:true})
+            .trigger('mousemove', -6300, -3000, {force:true})
+            .trigger('mouseup');
+    });
 });
