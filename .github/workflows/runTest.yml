@@ -17,11 +17,7 @@ jobs:
       
       - name: Install Cypress
         run: |
-          pwd
-          ls
           npm install
-          pwd
-          ls
 
       - name: run tests
         run: |
