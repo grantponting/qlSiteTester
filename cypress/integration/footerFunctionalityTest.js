@@ -2,6 +2,8 @@
 
 import navBarSelectors from '../support/Pages/multiPagePOM.js';
 
+const navBar = new navBarSelectors();
+
 describe ('Verify the Footer is functioning', () =>{
 	beforeEach(() => {
         cy.viewport(1440, 850);
@@ -13,77 +15,72 @@ describe ('Verify the Footer is functioning', () =>{
 	
 	it('What we Test', () => {
         cy.navigateToSite(); 
-        const navBar = new navBarSelectors();
-		navBar.getFooterWhatWeTest().click();
-		cy.url().should('eq', 'https://www.qualitylogic.com/what-we-test/');
+		navBar.getFooterWhatWeTest().should('have.attr', 'href').then((href) => {
+			expect(href).to.contain('https://www.qualitylogic.com/what-we-test/');
+        });
     });
 
     it('Test Solutions', () => {
-        const navBar = new navBarSelectors();
-		navBar.getFooterTestSolutions().click();
-		cy.url().should('eq', 'https://www.qualitylogic.com/testing-solutions/');
+		navBar.getFooterTestSolutions().should('have.attr', 'href').then((href) => {
+			expect(href).to.contain('https://www.qualitylogic.com/testing-solutions/');
+        });
     });
 
     it('Knowledge Center', () => {
-        const navBar = new navBarSelectors();
-		navBar.getFooterKnowledgeCenter().click();
-		cy.url().should('eq', 'https://www.qualitylogic.com/knowledge-center/');
+		navBar.getFooterKnowledgeCenter().should('have.attr', 'href').then((href) => {
+			expect(href).to.contain('https://www.qualitylogic.com/knowledge-center/');
+        });
     });
 
     it('Why Us', () => {
-        const navBar = new navBarSelectors();
-		navBar.getFooterWhyUs().click();
-		cy.url().should('eq', 'https://www.qualitylogic.com/company/');
+		navBar.getFooterWhyUs().should('have.attr', 'href').then((href) => {
+			expect(href).to.contain('https://www.qualitylogic.com/company/');
+        });
     });
 
     it('Who we Are', () => {
-        const navBar = new navBarSelectors();
-		navBar.getFooterWhoWeAre().click();
-		cy.url().should('eq', 'https://www.qualitylogic.com/who-we-are/');
+		navBar.getFooterWhoWeAre().should('have.attr', 'href').then((href) => {
+			expect(href).to.contain('https://www.qualitylogic.com/who-we-are/');
+        });
     });
 
     it('Careers', () => {
-        const navBar = new navBarSelectors();
-		navBar.getFooterCareers().click();
-		cy.url().should('eq', 'https://www.qualitylogic.com/company/careers/');
+		navBar.getFooterCareers().should('have.attr', 'href').then((href) => {
+			expect(href).to.contain('https://www.qualitylogic.com/company/careers/');
+        });
     });
 
     it('Contact Us', () => {
-        const navBar = new navBarSelectors();
-		navBar.getFooterContactUs().click();
-		cy.url().should('eq', 'https://www.qualitylogic.com/contact/');
+		navBar.getFooterContactUs().should('have.attr', 'href').then((href) => {
+			expect(href).to.contain('https://www.qualitylogic.com/contact/');
+        });
     });
 
     it('Facebook', () => {
-        const navBar = new navBarSelectors();
 		navBar.getFacebook().should('have.attr', 'href').then((href) => {
             expect(href).to.contain('https://www.facebook.com/QualityLogic');
         });
     });
 
     it('Twitter', () => {
-        const navBar = new navBarSelectors();
 		navBar.getTwitter().should('have.attr', 'href').then((href) => {
             expect(href).to.contain('https://twitter.com/QualityLogic');
         });
     });
 
     it('Linked In', () => {
-        const navBar = new navBarSelectors();
 		navBar.getLinkedIn().should('have.attr', 'href').then((href) => {
             expect(href).to.contain('https://www.linkedin.com/company/qualitylogic');
         });
     });
 
     it('YouTube', () => {
-        const navBar = new navBarSelectors();
 		navBar.getYouTube().should('have.attr', 'href').then((href) => {
             expect(href).to.contain('https://www.youtube.com/channel/UCx2YYjNRi_VyGnMNL1pFU8w');
         });
     });
 
     it('Address', () => {
-        const navBar = new navBarSelectors();
         navBar.getAddress()
             .invoke('text')
             .invoke('replace', /\u00a0/g, ' ')
