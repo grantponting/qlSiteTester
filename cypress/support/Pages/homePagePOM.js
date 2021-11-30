@@ -2,14 +2,11 @@
 
 class homePagePOM {
 
-getLeadInModal(){
-	return cy.get('div#leadinModal-content-wrapper-1803274');
-}
-getLeadInModalClose(){
-	return cy.get('div#leadInModal-1803274').get('button.leadinModal-close');
-}
+/**
+ * Get the Schedule Consultation CTA
+ */
 getScheduleConsultation(){
-	return cy.get('a.page.button.secondary');
+	return cy.get('a.page.button.secondary[href="https://www.qualitylogic.com/contact/"]');
 }
 getVideoButton(){
 	return cy.get('a.video.button.primary');
@@ -48,8 +45,11 @@ getVideoScheduleMeetingButton(){
 	const homePage = new homePagePOM();
 	return homePage.getVideoEndScreen().find('a.PMdp8'); 
 }
-getContactUsTodayAndReadMore(){
-	return cy.get('a.button.purple.large');
+getContactUsToday(){
+	return cy.get('div.medium-6.columns').find('a[href="https://www.qualitylogic.com/contact/"]');
+}
+getReadMore(){
+	return cy.get('div.medium-6.columns').find('a[href="https://www.qualitylogic.com/who-we-are/software-testing-client-reviews/"]');
 }
 getClutchIframe(){
 	return cy.get('div.clutch-widget').find('iframe').its('0.contentDocument').should('exist');
@@ -99,150 +99,127 @@ getHelpField(){
 	return cy.get('fieldset.form-columns-1').find('div.hs_message').find('div.input').find('textarea#message-f6f94c28-b673-48f3-bd6a-01f932c48e03');
 }
 getBookDiscoveryCTA(){
-	return cy.get('div.medium-6.columns').find('a.su-button');
+	return cy.get('div.medium-6.columns').find('a.su-button[href="https://info.qualitylogic.com/meetings/pclarke/onshore-software-testing"]');
 }
 getOurGuaranteeCTA(){
-	return cy.get('div.text-center.module-pad.icon-panel-home.background-').find('article.medium-4.columns.icon-panel-home-item.blue').find('a.button.blue');
+	return cy.get('div.text-center.module-pad.icon-panel-home.background-').find('a.button.blue[href="https://www.qualitylogic.com/company/our-guarantee/"]');
 }
 getHowWeWorkCTA(){
-	return cy.get('div.text-center.module-pad.icon-panel-home.background-').find('article.medium-4.columns.icon-panel-home-item.teal').find('a.button.teal');
+	return cy.get('div.text-center.module-pad.icon-panel-home.background-').find('a.button.teal[href="https://www.qualitylogic.com/company/why-qualitylogic/"]');
 }
 getGetStartedNowCTA(){
-	return cy.get('div.text-center.module-pad.icon-panel-home.background-').find('article.medium-4.columns.icon-panel-home-item.purple').find('a.button.purple');
+	return cy.get('div.text-center.module-pad.icon-panel-home.background-').find('a.button.purple[href="https://www.qualitylogic.com/contact/"]');
 }
 getLearnMoreCTA(){
-	return cy.get('section#features-benefits').find('div.row.column.text-center').find('a.button.primary');
+	return cy.get('section#features-benefits').find('a.button.primary[href="https://www.qualitylogic.com/company/why-qualitylogic/"]');
 }
-getSoftwareTestingSection(){
-	return cy.get('section.resources.module-pad').find('article.resources-item.column.column-block'); 
+getRegressionTesting(){
+	return cy.get('section.resources.module-pad').find('a[href="https://www.qualitylogic.com/testing-solutions/regression-testing/"]'); 
+}
+getAccessibilityTesting(){
+	return cy.get('section.resources.module-pad').find('a[href="https://www.qualitylogic.com/2019/09/30/from-chemist-to-qa-engineering-manager/"]'); 
+}
+getSmartEnergyTesting(){
+	return cy.get('section.resources.module-pad').find('a[href="https://www.qualitylogic.com/what-we-test/smart-energy-standards/ieee-2030-5-test-tools-qa-services/"]'); 
 }
 getViewAllResourcesCTA(){
-	return cy.get('section.resources.module-pad').find('div.column.row.text-center').find('a.button.blue');
+	return cy.get('section.resources.module-pad').find('div.column.row.text-center').find('a[href="https://www.qualitylogic.com/knowledge-center/"]');
 }
 getWhatWeTest(){
 	return cy.get('div.row').find('article.medium-4.featured-expertises-item.gray').find('ul');
 }
 getMobileApps(){
-	const homePage = new homePagePOM();
-	return homePage.getWhatWeTest().children().eq(0).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/what-we-test/mobile-apps/"]');
 }
 getWeb(){
-	const homePage = new homePagePOM();
-	return homePage.getWhatWeTest().children().eq(1).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/what-we-test/web/"]');
 }
 getEcommerce(){
-	const homePage = new homePagePOM();
-	return homePage.getWhatWeTest().children().eq(2).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/what-we-test/ecommerce/"]');
 }
 getOTTandStreaming(){
-	const homePage = new homePagePOM();
-	return homePage.getWhatWeTest().children().eq(3).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/what-we-test/ott-streaming-media/"]');
 }
 getAnalyticsAndTelemetry(){
-	const homePage = new homePagePOM();
-	return homePage.getWhatWeTest().children().eq(4).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/what-we-test/analytics-telemetry/"]');
 }
 getAPI(){
-	const homePage = new homePagePOM();
-	return homePage.getWhatWeTest().children().eq(5).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/what-we-test/apis/"]');
 }
 getIoT(){
-	const homePage = new homePagePOM();
-	return homePage.getWhatWeTest().children().eq(6).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/what-we-test/internet-of-things-iot/"]');
 }
 getSmartEnergyStandards(){
-	const homePage = new homePagePOM();
-	return homePage.getWhatWeTest().children().eq(7).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/what-we-test/smart-energy-standards/"]');
 }
 getPrintSystems(){
-	const homePage = new homePagePOM();
-	return homePage.getWhatWeTest().children().eq(8).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/what-we-test/print-systems/"]');
 }
 getFax(){
-	const homePage = new homePagePOM();
-	return homePage.getWhatWeTest().children().eq(9).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/what-we-test/fax-fax-over-ip/"]');
 }
 getSoftwareTestSolutions(){
 	return cy.get('div.row').find('article.medium-4.featured-expertises-item.blue').find('ul');
 }
 getFunctionality(){
-	const homePage = new homePagePOM();
-	return homePage.getSoftwareTestSolutions().children().eq(0).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/testing-solutions/functionality-testing/"]');
 }
 getInteroperability(){
-	const homePage = new homePagePOM();
-	return homePage.getSoftwareTestSolutions().children().eq(1).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/testing-solutions/interoperability-testing/"]');
 }
 getUsability(){
-	const homePage = new homePagePOM();
-	return homePage.getSoftwareTestSolutions().children().eq(2).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/testing-solutions/usability-testing/"]');
 }
 getTestAutomation(){
-	const homePage = new homePagePOM();
-	return homePage.getSoftwareTestSolutions().children().eq(3).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/testing-solutions/test-automation/"]');
 }
 getQAtestTools(){
-	const homePage = new homePagePOM();
-	return homePage.getSoftwareTestSolutions().children().eq(4).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/testing-solutions/qa-test-tools/"]');
 }
 getExploratoryTesting(){
-	const homePage = new homePagePOM();
-	return homePage.getSoftwareTestSolutions().children().eq(5).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/testing-solutions/exploratory-testing/"]');
 }
 getAgileQA(){
-	const homePage = new homePagePOM();
-	return homePage.getSoftwareTestSolutions().children().eq(6).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/testing-solutions/agile-qa/"]');
 }
 getLoadAndPerformance(){
-	const homePage = new homePagePOM();
-	return homePage.getSoftwareTestSolutions().children().eq(7).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/testing-solutions/load-performance-testing/"]');
 }
 getTestAndTechnology(){
-	const homePage = new homePagePOM();
-	return homePage.getSoftwareTestSolutions().children().eq(8).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/testing-solutions/test-technology-training/"]');
 }
 getAccessibility(){
-	const homePage = new homePagePOM();
-	return homePage.getSoftwareTestSolutions().children().eq(9).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/testing-solutions/accessibility-testing/"]');
 }
 getIndustries(){
 	return cy.get('div.row').find('article.medium-4.featured-expertises-item.teal').find('ul');
 }
 getRetailAndEcommerce(){
-	const homePage = new homePagePOM();
-	return homePage.getIndustries().children().eq(0).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/industries/retail-ecommerce/"]');
 }
 getMediaAndEntertainment(){
-	const homePage = new homePagePOM();
-	return homePage.getIndustries().children().eq(1).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/industries/media-entertainment/"]');
 }
 getSocialAndDating(){
-	const homePage = new homePagePOM();
-	return homePage.getIndustries().children().eq(2).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/industries/social-dating/"]');
 }
 getMarketingAndDesign(){
-	const homePage = new homePagePOM();
-	return homePage.getIndustries().children().eq(3).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/industries/marketing-design/"]');
 }
 getSmartEnergy(){
-	const homePage = new homePagePOM();
-	return homePage.getIndustries().children().eq(4).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/industries/smart-energy/"]');
 }
 getUtilities(){
-	const homePage = new homePagePOM();
-	return homePage.getIndustries().children().eq(5).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/industries/utilities/"]');
 }
 getImaging(){
-	const homePage = new homePagePOM();
-	return homePage.getIndustries().children().eq(6).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/industries/imaging-3d-printing/"]');
 }
 getTelecom(){
-	const homePage = new homePagePOM();
-	return homePage.getIndustries().children().eq(7).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/industries/telecom/"]');
 }
 getEducation(){
-	const homePage = new homePagePOM();
-	return homePage.getIndustries().children().eq(8).find('a');
+	return cy.get('section#featured-expertises a[href="https://www.qualitylogic.com/industries/education-nonprofits/"]');
 }
 getLogoRows(){
 	return cy.get('section#clients-logos').find('div.row.column.text-center').find('div.su-row'); 
