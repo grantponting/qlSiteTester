@@ -312,7 +312,7 @@ describe ('Verify the Nav Bar is functioning', () =>{
 		});
 	});
 
-	it('Test Tools > Quality Logic Store', () =>{
+	it('Test Tools > QualityLogic Store', () =>{
 		navBar.getTestTools().click();
 		navBar.getTestToolsQualityLogicStore().should('have.attr', 'href').then((href) => {
 			expect(href).to.contain('/store');
