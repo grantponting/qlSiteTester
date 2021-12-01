@@ -15,7 +15,7 @@ describe ('Verify the Homepage has the correct functionality', () =>{
 
 	it('Schedule a Consultation CTA', () => {
 		cy.navigateToSite();
-		homePage.getScheduleConsultation(); 
+		homePage.getScheduleConsultation().should('be.visible'); 
 	});
 
 
@@ -55,11 +55,11 @@ describe ('Verify the Homepage has the correct functionality', () =>{
 	});
 
 	it('Contact us today CTA', () => {
-		homePage.getContactUsToday();
+		homePage.getContactUsToday().should('be.visible');
 	});
 
 	it('Read more reviews CTA', () => {
-		homePage.getReadMore();
+		homePage.getReadMore().should('be.visible');
 	});
 
 	it('Clutch Iframe', () => { 
@@ -115,161 +115,161 @@ describe ('Verify the Homepage has the correct functionality', () =>{
 	});
 
 	it('Book a Discovery Call', () => {
-		homePage.getBookDiscoveryCTA();
+		homePage.getBookDiscoveryCTA().should('be.visible');
 	});
 
 	it('Our Guarantee CTA', () => {
-		homePage.getOurGuaranteeCTA();	
+		homePage.getOurGuaranteeCTA().should('be.visible');	
     });
 
 	it('How We Work CTA', () => {
-		homePage.getHowWeWorkCTA();
+		homePage.getHowWeWorkCTA().should('be.visible');
 	});
 
 	it('Get Started Now CTA', () => {
-		homePage.getGetStartedNowCTA();
+		homePage.getGetStartedNowCTA().should('be.visible');
 	});
 
 	it('Learn More CTA', () => {
-		homePage.getLearnMoreCTA();
+		homePage.getLearnMoreCTA().should('be.visible');
 	});
 
 	it('Regression Testing', () => {
-		homePage.getRegressionTesting();
+		homePage.getRegressionTesting().should('be.visible');
 	});
 
 	it('Accessibility Team', () => {
-		homePage.getAccessibilityTesting();
+		homePage.getAccessibilityTesting().should('be.visible');
 	});
 
 	it('Smart Energy', () => {
-		homePage.getSmartEnergyTesting();
+		homePage.getSmartEnergyTesting().should('be.visible');
 	});
 
 	it('View All Resources CTA', () => { 
-		homePage.getViewAllResourcesCTA();
+		homePage.getViewAllResourcesCTA().should('be.visible');
 	});
 
 	it('Mobile App link', () => {
-		homePage.getMobileApps();
+		homePage.getMobileApps().should('be.visible');
 	});
 
 	it('Web link', () => { 
-		homePage.getWeb();
+		homePage.getWeb().should('be.visible');
 	});
 
 	it('eCommerce link', () => { 
-		homePage.getEcommerce(); 
+		homePage.getEcommerce().should('be.visible'); 
 	});
 
 	it('OTT & Streaming Media link', () => { 
-		homePage.getOTTandStreaming();
+		homePage.getOTTandStreaming().should('be.visible');
 	});
 
 	it('Analytics & Telemetry link', () => { 
-		homePage.getAnalyticsAndTelemetry();
+		homePage.getAnalyticsAndTelemetry().should('be.visible');
 	});
 
 	it('APIs link', () => { 
-		homePage.getAPI();
+		homePage.getAPI().should('be.visible');
 	});
 
 	it('IoT link', () => { 
-		homePage.getIoT();
+		homePage.getIoT().should('be.visible');
 	});
 
 	it('Smart Energy Standards link', () => { 
-		homePage.getSmartEnergyStandards();
+		homePage.getSmartEnergyStandards().should('be.visible');
 	});
 
 	it('Print Systems link', () => { 
-		homePage.getPrintSystems();
+		homePage.getPrintSystems().should('be.visible');
 	});
 
 	it('Fax & Fax over IP link', () => { 
-		homePage.getFax();
+		homePage.getFax().should('be.visible');
 	});
 
 	it('Functionality Testing link', () => { 
-		homePage.getFunctionality(); 
+		homePage.getFunctionality().should('be.visible'); 
 	});
 
 	it('Interoperability Testing link', () => { 
-		homePage.getInteroperability();
+		homePage.getInteroperability().should('be.visible');
 	});
 
 	it('Usability Testing link', () => { 
-		homePage.getUsability();
+		homePage.getUsability().should('be.visible');
 	});
 
 	it('Test Automation link', () => { 
-		homePage.getTestAutomation();
+		homePage.getTestAutomation().should('be.visible');
 	});
 
 	it('QA Test Tools link', () => { 
-		homePage.getQAtestTools();
+		homePage.getQAtestTools().should('be.visible');
 	});
 
 	it('Exploratory Testing link', () => { 
-		homePage.getExploratoryTesting();
+		homePage.getExploratoryTesting().should('be.visible');
 	});
 
 	it('Agile QA link', () => { 
-		homePage.getAgileQA(); 
+		homePage.getAgileQA().should('be.visible'); 
 	});
 
 	it('Load & Performance Testing link', () => { 
-		homePage.getLoadAndPerformance();
+		homePage.getLoadAndPerformance().should('be.visible');
 	});
 
 	it('Test & Technology Training link', () => { 
-		homePage.getTestAndTechnology();
+		homePage.getTestAndTechnology().should('be.visible');
 	});
 
 	it('Accessibility Testing link', () => { 
-		homePage.getAccessibility();
+		homePage.getAccessibility().should('be.visible');
 	});
 
 	it('Retail & eCommerce link', () => { 
-		homePage.getRetailAndEcommerce();
+		homePage.getRetailAndEcommerce().should('be.visible');
 	});
 
 	it('Media & Entertainment link', () => { 
-		homePage.getMediaAndEntertainment();
+		homePage.getMediaAndEntertainment().should('be.visible');
 	});
 
 	it('Social & Dating link', () => { 
-		homePage.getSocialAndDating();
+		homePage.getSocialAndDating().should('be.visible');
 	});
 
 	it('Marketing & Design link', () => { 
-		homePage.getMarketingAndDesign();
+		homePage.getMarketingAndDesign().should('be.visible');
 	});
 
 	it('Smart Energy link', () => { 
-		homePage.getSmartEnergy();
+		homePage.getSmartEnergy().should('be.visible');
 	});
 
 	it('Utilities link', () => { 
-		homePage.getUtilities();
+		homePage.getUtilities().should('be.visible');
 	});
 
 	it('Imaging & 3D Printing link', () => { 
-		homePage.getImaging(); 
+		homePage.getImaging().should('be.visible'); 
 	});
 
 	it('Telecom link', () => { 
-		homePage.getTelecom();
+		homePage.getTelecom().should('be.visible');
 	});
 
 	it('Education & Nonprofits link', () => { 
-		homePage.getEducation();
+		homePage.getEducation().should('be.visible');
 	});
 
 	it('Logos', () => { // checks that all logos are displaying an image (could add a test for the hyperlinks on certain logos)
 		homePage.getLogoRows().each(($el) => {
 			cy.wrap($el).find('div.su-column.su-column').each(($el) => {
-				cy.wrap($el).find('img');
+				cy.wrap($el).find('img').should('be.visible');
 			});
 		});
 	});

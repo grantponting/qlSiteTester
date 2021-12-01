@@ -15,51 +15,51 @@ describe ('Verify the Homepage has the correct functionality', () =>{
 
 	it('Schedule a Consultation CTA', () => {
         cy.navigateToSite();
-		homePage.getScheduleConsultation(); 
+		homePage.getScheduleConsultation().should('be.visible'); 
 	});
 
 	it('Contact us today CTA', () => {
-		homePage.getContactUsToday();
+		homePage.getContactUsToday().should('be.visible');
 	});
 
 	it('Read more reviews CTA', () => {
-		homePage.getReadMore();
+		homePage.getReadMore().should('be.visible');
 	});
 
 	it('Book a Discovery Call', () => {
-		homePage.getBookDiscoveryCTA();
+		homePage.getBookDiscoveryCTA().should('be.visible');
 	});
 
 	it('Our Guarantee CTA', () => {
-		homePage.getOurGuaranteeCTA();	
+		homePage.getOurGuaranteeCTA().should('be.visible');	
     });
 
 	it('How We Work CTA', () => {
-		homePage.getHowWeWorkCTA();
+		homePage.getHowWeWorkCTA().should('be.visible');
 	});
 
 	it('Get Started Now CTA', () => {
-		homePage.getGetStartedNowCTA();
+		homePage.getGetStartedNowCTA().should('be.visible');
 	});
 
 	it('Learn More CTA', () => {
-		homePage.getLearnMoreCTA();
+		homePage.getLearnMoreCTA().should('be.visible');
 	});
 
 	it('Regression Testing', () => {
-		homePage.getRegressionTesting();
+		homePage.getRegressionTesting().should('be.visible');
 	});
 
 	it('Accessibility Team', () => {
-		homePage.getAccessibilityTesting();
+		homePage.getAccessibilityTesting().should('be.visible');
 	});
 
 	it('Smart Energy', () => {
-		homePage.getSmartEnergyTesting();
+		homePage.getSmartEnergyTesting().should('be.visible');
 	});
 
 	it('View All Resources CTA', () => { 
-		homePage.getViewAllResourcesCTA();
+		homePage.getViewAllResourcesCTA().should('be.visible');
 	});
 
 });

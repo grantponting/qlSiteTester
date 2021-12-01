@@ -9,6 +9,9 @@ cypress/results/*
 cypress/reports/*
 cypress/screenshots/*
 cypress/videos/*
+cypress/fixtures/*
+node_modules/*
+package-lock.json
 
 ### Java ###
 # Compiled class file
@@ -36,6 +39,7 @@ cypress/videos/*
 hs_err_pid*
 
 ### VisualStudioCode ###
+.vs/*
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json

@@ -6,7 +6,7 @@ const navBar = new navBarSelectors();
 
 describe ('Verify the Footer is functioning', () =>{
 	beforeEach(() => {
-        cy.viewport(1440, 850);
+    cy.viewport(1440, 850);
 		cy.on('uncaught:exception', (err, runnable) => {		//this error is seen on several pages, ignoring so that tests do not fail due to this error
 			expect(err.message, { log: false }).to.include('wp is not defined');
 			return false;
@@ -51,8 +51,8 @@ describe ('Verify the Footer is functioning', () =>{
     });
 
     it('Contact Us', () => {
-		navBar.getFooterContactUs().should('have.attr', 'href').then((href) => {
-			expect(href).to.contain('https://www.qualitylogic.com/contact/');
+		    navBar.getFooterContactUs().should('have.attr', 'href').then((href) => {
+			    expect(href).to.contain('https://www.qualitylogic.com/contact/');
         });
     });
 

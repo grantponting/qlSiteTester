@@ -2,10 +2,11 @@
 
 import contactPOM from '../support/Pages/contactPOM.js';
 
+const contactPage = new contactPOM();
+
 describe ('Verify the Contact page has the correct functionality', () =>{
 	beforeEach(() => {
 		cy.viewport(1440, 850);
-		cy.navigateToContactPage(); 
 		cy.on('uncaught:exception', (err, runnable) => {		//this error is seen on several pages, ignoring so that tests do not fail due to this error
 			expect(err.message, { log: false }).to.include('wp is not defined');
 			return false;
@@ -13,35 +14,27 @@ describe ('Verify the Contact page has the correct functionality', () =>{
 	}); 
 
 	it('Request a Quote CTA', () => {
-		const contactPage = new contactPOM();
+        cy.navigateToContactPage(); 
         contactPage.getRequestQuoteCTA().should('have.text', 'Request a Quote');
-		contactPage.getRequestQuoteCTA().click();
-		cy.url().should('eq', 'https://www.qualitylogic.com/contact/request-a-quote/'); 
+		contactPage.getRequestQuoteCTA().should('be.visible');
 	});
     
     it('General Inquiries CTA', () => {
-		const contactPage = new contactPOM();
         contactPage.getGeneralInquiriesCTA().should('have.text', 'General Inquiries');
-		contactPage.getGeneralInquiriesCTA().click();
-		cy.url().should('eq', 'https://www.qualitylogic.com/contact/general-inquiries/'); 
+		contactPage.getGeneralInquiriesCTA().should('be.visible');
 	});
 
     it('Support CTA', () => {
-		const contactPage = new contactPOM();
         contactPage.getSupportCTA().should('have.text', 'Support'); 
-		contactPage.getSupportCTA().click();
-		cy.url().should('eq', 'https://www.qualitylogic.com/contact/support/'); 
+		contactPage.getSupportCTA().should('be.visible'); 
 	});
 
     it('Careers CTA', () => {
-		const contactPage = new contactPOM();
         contactPage.getCareersCTA().should('have.text', 'Careers');
-		contactPage.getCareersCTA().click();
-		cy.url().should('eq', 'https://www.qualitylogic.com/contact/careers/'); 
+		contactPage.getCareersCTA().should('be.visible'); 
 	});
 
-    it('First Name Field', () => {
-        const contactPage = new contactPOM(); 
+    it('Form Test', () => {
         contactPage.getFirstNameField().should('not.have.class', 'error');
 		contactPage.getLastNameField().should('not.have.class', 'error'); 
         contactPage.getWorkEmailField().should('not.have.class', 'error'); 
@@ -84,11 +77,36 @@ describe ('Verify the Contact page has the correct functionality', () =>{
         contactPage.getTellUsAboutProjectField().should('not.have.class', 'error'); 
     });
 
-    it('Drags Carousel', () => {  // not convinced this is working how I want it to. I think this is a false positive
-		const contactPage = new contactPOM();
+    it('Drags Carousel', () => {  // might be a false positive (I think it worked)
         contactPage.getLogoCarousel()
             .trigger('mousedown', { which:1}, {force:true})
             .trigger('mousemove', -6300, -3000, {force:true})
             .trigger('mouseup');
     });
+
+    it('Aimtex', () => {
+        contactPage.getAimtexLink().should('be.visible');
+        contactPage.getAimtexEmail().should('be.visible');
+    });
+
+    it('GCOM', () => {
+        contactPage.getGCOMlink().should('be.visible');
+        contactPage.getGCOMemail().should('be.visible');
+    });
+
+    it('Yan Thai', () => {
+        contactPage.getYanThaiLink().should('be.visible');
+        contactPage.getYanThaiEmail().should('be.visible');
+    });
+
+    it('Daekyoung', () => {
+        contactPage.getDaekyoungLink().should('be.visible');
+        contactPage.getDaekyoungEmail().should('be.visible');
+    });
+
+    it('Grid Wiz Inc.', () => {
+        contactPage.getGridWizLink().should('be.visible');
+        contactPage.getGridWizEmail().should('be.visible');
+    });
+
 });
